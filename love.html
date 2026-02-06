@@ -8,36 +8,31 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: radial-gradient(circle, #ff9a9e, #fad0c4);
+    background: 
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url("https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8");
+    background-size: cover;
+    background-position: center;
     font-family: 'Segoe UI', sans-serif;
-    text-align: center;
     color: white;
-    padding: 30px;
-    overflow: hidden;
+    text-align: center;
+    padding: 40px;
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3.2em;
 }
 
 p {
     font-size: 1.6em;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
 }
 
 iframe {
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 20px;
-}
-
-/* Heart rain */
-.heart {
-    position: absolute;
-    animation: fall 5s linear infinite;
-}
-
-@keyframes fall {
-    0% { transform: translateY(-10vh); opacity: 1; }
-    100% { transform: translateY(110vh); opacity: 0; }
 }
 </style>
 </head>
@@ -45,37 +40,27 @@ iframe {
 <body>
 
 <h1>Anjali Karki ❤️</h1>
+
 <p>
-You said YES 💖<br>
-And that just made me the luckiest person alive 😘<br>
-This song reminds me of you ✨
+Thank you for coming into my life  
+and loving me the most.  
+<br><br>
+Thank you for always supporting me  
+in my hardest times  
+and standing by me when I needed it the most.  
+<br><br>
+I love you the most ❤️🦫
 </p>
 
-<!-- Ed Sheeran – Perfect -->
 <iframe width="320" height="180"
 src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=1"
 allow="autoplay; encrypted-media"
 allowfullscreen>
 </iframe>
 
-<p style="margin-top:20px;">
-💖💖💖💖💖<br>
-❤️❤️❤️❤️❤️<br>
-💕💕💕💕💕
+<p style="margin-top:25px;">
+💖💖💖 ❤️❤️❤️ 💕💕💕
 </p>
-
-<script>
-/* Heart rain */
-setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerText = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (18 + Math.random() * 25) + "px";
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
-}, 250);
-</script>
 
 </body>
 </html>
