@@ -25,13 +25,14 @@ h1 {
 
 #message {
     color: white;
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin: 15px;
 }
 
 #reaction img {
-    width: 200px;
+    width: 220px;
     border-radius: 15px;
+    margin-top: 10px;
 }
 
 .buttons {
@@ -84,9 +85,15 @@ function noClicked() {
         document.getElementById("message").innerHTML = "😒 Wrong answer";
     } 
     else if (noCount === 2) {
-        document.getElementById("message").innerHTML = "😮‍💨 This is not the right answer";
+        document.getElementById("message").innerHTML = "🥺 Please be my Valentine";
         document.getElementById("reaction").innerHTML =
-        `<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2xqM2d6Z2U1b2R0NmV4cDVtZTZjY2xqaHZnZzBzb2R2eDJ3c3l5NCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6ZsS8GFJKJeJoRQ4/giphy.gif">`;
+        `<img src="https://media.giphy.com/media/3o6ZsS8GFJKJeJoRQ4/giphy.gif">`;
+    }
+    else if (noCount === 3) {
+        document.getElementById("message").innerHTML =
+        "🧪 Okay… taking drastic measures 😏 Love potion activated!";
+        document.getElementById("reaction").innerHTML =
+        `<img src="https://i.imgur.com/5qH6YtH.png">`;
     }
 }
 
@@ -110,4 +117,5 @@ function yesClicked() {
 
 </body>
 </html>
-Update Valentine page logic and message
+
+Update 
