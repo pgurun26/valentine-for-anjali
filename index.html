@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Anjali ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 3.2em;
+    margin-bottom: 10px;
+}
+
+#typing {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    position: relative;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yesBtn {
+    background: #ff3366;
+    color: white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+#noBtn {
+    background: #444;
+    color: white;
+    position: absolute;
+    left: 180px;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Anjali Karki ❤️</h1>
+<div id="typing"></div>
+
+<div class="buttons">
+    <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
+    <button id="noBtn" onmouseover="moveNo()">NO 💔</button>
+</div>
+
+<script>
+/* Typing animation */
+const text = "Will you be my Valentine? 💘";
+let index = 0;
+function typeText() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 100);
+    }
+}
+typeText();
+
+/* NO button escape + YES growth */
+let yesSize = 1;
+function moveNo() {
+    const noBtn = document.getElementById("noBtn");
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+
+    yesSize += 0.15;
+    document.getElementById("yesBtn").style.transform = `scale(${yesSize})`;
+}
+
+/* YES click */
+function yesClicked() {
+    window.location.href = "love.html";
+}
+
+/* Floating hearts */
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 25) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
